@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<p id="bai7"></p>
+<button onclick="revert(arr8)"> Bai 8</button>
+<p id ="bai8"></p>
+<script>
+    function square(x) {
+        return x*x
+    }
+
+    /**
+     * @return {number}
+     */
+    function Stron(r) {
+        return 3.14*r*r
+    }
+    function chuvitron(r) {
+        return 3.14*2*r
+
+    }
+    function giaithua(x) {
+        let j=x;
+        for (let i=x-1;i>0;i--){
+            j=j*i;
+        }
+        return j
+    }
+    function kiemtraso() {
+        let a=prompt("Nhap 1 ky tu");
+        return a === parseFloat(a);
+    }
+    function minof3(arr) {
+        let min=arr[0];
+        for (let i=1; i<3; i++){
+            if (arr[i]<min){ min= arr[i]}
+        }
+        return min
+
+    }
+    function kiemtranguyenduong() {
+        let x=prompt("Nhap 1 so");
+        return parseFloat(x) === parseInt(x) && parseInt(x) > 0;
+    }
+    function doicho() {
+        let a=parseInt(prompt("Nhap so a"));
+        let b=parseInt(prompt("Nhap so b"));
+        bai7.innerHtml="Hai so ban dau la:"+a+","+b+"<br/>"+'Hai so luc sau la: '+a+','+b
+    }
+    let arr=[]
+   for (let i=0;i<5;i++){
+    arr[i]=Math.random()*10;
+   }
+    function reverts(arr) {
+        let b=[]
+        for (let i =0; i<arr.length; i++){
+        b[i]=arr[arr.length-1-i]
+        }
+        return b;
+    }
+</script>
+</body>
+</html>
